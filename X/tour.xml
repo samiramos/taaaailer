@@ -1,0 +1,43 @@
+<krpano version="1.20.9" title="Modtissimo 2021">
+
+	<include url="skin/vtourskin.xml" />
+
+	<!-- startup action - load the first scene -->
+	<action name="startup" autorun="onstart">
+		if(startscene === null OR !scene[get(startscene)], copy(startscene,scene[0].name); );
+		loadscene(get(startscene), null, MERGE);
+		if(startactions !== null, startactions() );
+	</action>
+
+
+	<layer name="logo"
+	 url="logo.png" 
+	 keep="true" 
+	 enabled="true"
+	 width="75" 
+	 height="57" 
+	 align="righttop" 
+	 x="10" 
+	 y="10" 
+	 alpha="0.5" 
+	 onover="tween(alpha,1,1);" 
+	 onout="tween(alpha,0.5,1);" 
+	 onclick="openurl('https://modtissimo.com/',_blank);"/>
+
+
+	<scene name="scene_01Exterior" title="Exterior" onstart="" thumburl="panos/01Exterior.tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.100" vlookat="0.000" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/01Exterior.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/01Exterior.tiles/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="11.247" atv="1.929" linkedscene="scene_05sala" />
+
+	</scene>
+	
+</krpano>
