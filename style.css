@@ -85,7 +85,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .eating {
-	padding: 25px 0 0 0;
+	padding: 10px 0 0 0;
 }
 
 .landing {
@@ -110,7 +110,6 @@ p {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	padding-top: 15px;
 }
 
 .list img {
@@ -122,6 +121,10 @@ p {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+}
+
+ol {
+	margin-bottom: 0;
 }
 
 .fleximage img {
@@ -143,8 +146,8 @@ p {
 }
 
 .btn-primary {
-	background-color: pink;	
-    border-color: pink;	
+	background-color: #ff4f6e;	
+    border-color: #ff4f6e;	
 }
 
 .btn-primary:hover {
@@ -159,7 +162,7 @@ p {
    }
 
 .line {
-    border: 4px solid pink;
+    border: 1px solid #ff4f6e;
     max-width: 1080px;
     opacity: 1;
 }
